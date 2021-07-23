@@ -17,6 +17,16 @@ function createRandom(min,max){
 //Variable declaration
 let nbTry=1,win=false,answer = createRandom(1,10),human = [1,2,3],nbTryMax = 4;
 
+//While it's not finish
+while(nbTry<4 && !win){
+
+    play();
+    nbTry+=1;
+}
+//If it's finish
+if(nbTry===4){
+    console.log(`Le numéro à trouver était le ${answer}`);
+}
 /**
  * Function which verify if the game is finish
  */
@@ -30,15 +40,7 @@ function play(){
         console.log(`Bravo ! Vous avez trouvé le ${answer} en ${nbTry} essais`);
     }
 }
-//While it's not finish
-while(nbTryMax<4 && !win){
-    play();
-    nbTryMax+=1;
-}
-//If it's finish
-if(nbTryMax==4){
-    console.log(`Le numéro à trouver était le ${answer}`);
-}
+
 
 
 
