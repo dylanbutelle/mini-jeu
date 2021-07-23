@@ -15,16 +15,16 @@ function createRandom(min,max){
     return answer;
 }
 //Variable declaration
-let nbTry=1,win=false,answer = createRandom(1,10),human = [1,2,3],nbTryMax = 4;
+let nbTry=1,win=false,answer = createRandom(1,10),human = [1,2,3],nbTryMax=4;
 
 //While it's not finish
-while(nbTry<4 && !win){
+while(nbTry<nbTryMax && !win){
 
     play();
     nbTry+=1;
 }
 //If it's finish
-if(nbTry===4){
+if(nbTry===nbTryMax){
     console.log(`Le numéro à trouver était le ${answer}`);
 }
 /**
